@@ -18,13 +18,13 @@ inquirer
     },
     {
       type: 'input',
-      name: 'install',
+      name: 'installation',
       message: 'What are the steps to install your project?',
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'Provide instruction and examples for use.',
+      message: 'Provide example or what is this project use for?',
     },
     {
       type: 'input',
@@ -36,7 +36,7 @@ inquirer
         name: 'license',
         choices: ['Apache license 2.0', 'Boost Software License 1.0', 'MIT', 'Mozilla Public License 2.0',
          'Open Software License 3.0', 'The Unlicense', 'gnu gpl-3.0'],
-        message: 'Choose a license for your project?',
+        message: 'Choose a license used for this project?',
       },
       {
         type: 'input',
