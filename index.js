@@ -2,8 +2,37 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
+//const questions = [];
+const generateReadme = (answers) =>
+`
+## ${answers.title}
+<br />
 
-const questions = [];
+## Desceription
+${answers.description}
+<br />
+${answers.license}
+<br />
+
+## Table of Content
+
+
+## Installation
+${answers.installation}
+<br />
+
+## Usage
+${answers.usage}
+<br />
+## Contributing
+${answers.contribution}
+<br />
+
+## Questions
+${answers.userName}
+
+${answers.email}
+`
 inquirer
   .prompt([
     {
@@ -40,7 +69,7 @@ inquirer
       },
       {
         type: 'input',
-        name: 'github',
+        name: 'userName',
         message: 'What is your github username?',
     },
     {
@@ -50,8 +79,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    
-
+        const readmeContent = generateReadme(answers);
   });
 
 // TODO: Create a function to write README file
