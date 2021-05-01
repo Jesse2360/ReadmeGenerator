@@ -16,4 +16,4 @@ SO THAT I can quickly create a professional README for a new project
  ･JavaScript <br />
  ･Node.js <br />
 
- [link](https://jesse2360.github.io/ReadmeGenerator/)
+ [video tutorial](https://www.youtube.com/watch?v=Tj-H51DyUu8)
