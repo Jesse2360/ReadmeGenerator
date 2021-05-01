@@ -107,21 +107,3 @@ inquirer
         fs.writeFile("jREADME.md", readmeContent, (error) =>
         error ? console.log(error) : console.log("Ready! Your README.md file has been created!"))
     });
-
- // TODO: Create a function to write README file
-   /* function writeFile(readmeContent) {
-        fs.writeToFile("./readme/README.md", readmeContent, (err) => {
-            if(err){
-            return console.log(err);
-        }
-            console.log("Success, README.md file has been generated");
-   })
-}*/
-
-// TODO: Create a function to initialize app
-/*function init() {
-})
-*/
-
-// Function call to initialize app
-//init();
