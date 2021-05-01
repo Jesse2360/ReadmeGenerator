@@ -9,9 +9,10 @@ const generateReadme = (answers) =>
 <br />
 
 ## Description
-${answers.description}
+ ${answers.description}
 <br />
 
+License used in this project:
 ${answers.license}
 <br />
 
@@ -24,27 +25,28 @@ ${answers.license}
 <br />
 
 ## Installation
-${answers.installation}
+ ${answers.installation}
 <br />
 
 ## Usage
-${answers.usage}
+ ${answers.usage}
 <br />
 
 ## Contributing
-Contributors in this project: ${answers.contribution}
+ Contributors in this project: ${answers.contribution}
 <br />
 
 ## Test
-In the command line you can type ${answers.test}
+ In the command line you can type ${answers.test}
 <br />
 
 ## Questions
 
-My GitHub: ${answers.userName}
+ If you have any other questions or comments you can contact me at:<br />
+ My GitHub: https://github.com/${answers.userName}
 
-you can also email at:
-${answers.email}
+ you can also email at:
+ ${answers.email}
 `;
 
 inquirer
@@ -78,7 +80,7 @@ inquirer
     type: 'list',
     name: 'license',
     choices: ['Apache license 2.0', 'Boost Software License 1.0', 'MIT', 'Mozilla Public License 2.0',
-        'Open Software License 3.0', 'The Unlicense', 'gnu gpl-3.0'],
+        'Open Software License 3.0', 'The Unlicense', 'gnu gpl-3.0', 'None'],
     message: 'Choose a license used for this project?',
     },
     {
@@ -99,26 +101,22 @@ inquirer
 
 ])
 .then((answers) => {
-    
+
     const readmeContent = generateReadme(answers);
 
-    /*fs.writeFile("./readme/README.md", readmeContent, (err) => {
-        if(err){
-            return console.log(err);
-        }
-        console.log("READY!, README.md file has been created!");
-    })*/
-});
+        fs.writeFile("jREADME.md", readmeContent, (error) =>
+        error ? console.log(error) : console.log("Ready! Your README.md file has been created!"))
+    });
 
  // TODO: Create a function to write README file
-    function writeFile(readmeContent) {
+   /* function writeFile(readmeContent) {
         fs.writeToFile("./readme/README.md", readmeContent, (err) => {
             if(err){
             return console.log(err);
         }
             console.log("Success, README.md file has been generated");
    })
-}
+}*/
 
 // TODO: Create a function to initialize app
 /*function init() {
