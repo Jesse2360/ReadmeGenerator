@@ -16,4 +16,5 @@ SO THAT I can quickly create a professional README for a new project
  ･JavaScript <br />
  ･Node.js <br />
 
- [video tutorial](https://www.youtube.com/watch?v=Tj-H51DyUu8)
+# Link to Tutorial
+[Video Tutorial](https://www.youtube.com/watch?v=Tj-H51DyUu8)
